@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
@@ -8,9 +7,21 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
-
   <ItemGroup>
+    <PackageReference Include="Microsoft.ML" Version="1.7.1" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="1.7.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
   </ItemGroup>
-
+  <ItemGroup Label="MLModelAbby">
+    <None Include="MLModelAbby.consumption.cs">
+      <DependentUpon>MLModelAbby.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelAbby.training.cs">
+      <DependentUpon>MLModelAbby.mbconfig</DependentUpon>
+    </None>
+    <None Include="MLModelAbby.zip">
+      <DependentUpon>MLModelAbby.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
