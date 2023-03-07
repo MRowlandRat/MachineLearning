@@ -24,7 +24,7 @@
             }
             else
             {
-                return result.Score.ToString();
+                return "$" + result.Score.ToString();
             }
 
         }
