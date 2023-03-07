@@ -11,6 +11,7 @@
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
     <PackageReference Include="Microsoft.ML.FastTree" Version="1.7.1" />
     <PackageReference Include="Microsoft.ML.LightGbm" Version="1.7.1" />
+    <PackageReference Include="Microsoft.ML" Version="1.7.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
     <PackageReference Include="MSTest.TestFramework" Version="3.0.2" />
   </ItemGroup>
@@ -23,6 +24,19 @@
     </None>
     <None Include="MLMMichael.zip">
       <DependentUpon>MLMMichael.mbconfig</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
+  <ItemGroup Label="CancerClassification">
+    <None Include="CancerClassification.consumption.cs">
+      <DependentUpon>CancerClassification.mbconfig</DependentUpon>
+    </None>
+    <None Include="CancerClassification.training.cs">
+      <DependentUpon>CancerClassification.mbconfig</DependentUpon>
+    </None>
+    <None Include="CancerClassification.zip">
+      <DependentUpon>CancerClassification.mbconfig</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
