@@ -1,0 +1,54 @@
+﻿@model SpaceMissionModel
+
+@{
+    ViewData["Title"] = "SpaceMissionHome";
+}
+
+
+<form asp-controller="SpaceMission" asp-action="SpaceMissionResultPage" method="post">
+    <style>
+        .help {
+            background-color: blue;
+            
+        }
+    </style>
+
+    <div class="help">
+        <div>
+            <h2>
+                Enter Data for Mission Prediction
+                <hr />
+                <div asp-validation-summary="All"></div>
+            </h2>
+        </div>
+
+        <div>
+            <label asp-for="companyName"></label>
+            <input asp-for="companyName" />
+            <span asp-validation-for="companyName"></span>
+        </div>
+
+        <div>
+            <label asp-for="location"></label>
+            <input asp-for="location" />
+            <span asp-validation-for="location"></span>
+        </div>
+
+        <div>
+            <label asp-for="statusRocket"></label>
+            <input asp-for="statusRocket" />
+            <span asp-validation-for="statusRocket"></span>
+        </div>
+
+        <div>
+            <label asp-for="rocketCost"></label>
+            <input asp-for="rocketCost" />
+            <span asp-validation-for="rocketCost"></span>
+        </div>
+
+        <button type="submit">
+            Predict Mission Success
+        </button>
+    </div>
+
+</form>
