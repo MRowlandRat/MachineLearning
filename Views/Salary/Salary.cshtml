@@ -1,0 +1,44 @@
+﻿@model person;
+
+
+<form asp-controller="Salary" asp-action="Salary_Prediction" method="post">
+
+    <div>
+        <div>
+            <h2>
+                enter the information below and hit submit
+                <hr />
+            </h2>
+        </div>
+        <div>
+            <label asp-for="Company"></label>
+            <input asp-for="Company" />
+            <span asp-validation-for="Company"></span>
+        </div>
+        <div>
+            <label asp-for="Title"></label>
+            <input asp-for="Title"/>
+            <span asp-validation-for="Title"></span>
+        </div>
+        <div>
+            <label asp-for="Location"></label>
+            <input asp-for="Location" />
+            <span asp-validation-for="Location"></span>
+        </div>
+        <div>
+            <label asp-for="YearsOfExperience"></label>
+            <input asp-for="YearsOfExperience" />
+            <span asp-validation-for="YearsOfExperience"></span>
+        </div>
+        <div>
+            <label asp-for="YearsAtCompany"></label>
+            <input asp-for="YearsAtCompany" />
+            <span asp-validation-for="YearsAtCompany"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            create prediction
+        </button>
+    </div>
+
+</form>
+
