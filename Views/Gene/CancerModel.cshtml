@@ -1,0 +1,32 @@
+﻿@model Cancer
+<form asp-controller="Gene" asp-action="GeneResult" method="post">
+
+    <div>
+        <div>
+            <h2>
+                enter the information below and hit submit
+                <hr />
+                <div asp-validation-summary="All"></div>
+            </h2>
+        </div>
+        <div>
+            <label asp-for="Gene_Description"></label>
+            <input asp-for="Gene_Description" />
+            <span asp-validation-for="Gene_Description"></span>
+        </div>
+        <div>
+            <label asp-for="Gene_Accession_Number"></label>
+            <input asp-for="Gene_Accession_Number" />
+            <span asp-validation-for="Gene_Accession_Number"></span>
+        </div>
+        <div>
+            <label asp-for="Call"></label>
+            <input asp-for="Call" />
+            <span asp-validation-for="Call"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            create prediction
+        </button>
+    </div>
+
+</form>
