@@ -36,7 +36,14 @@ namespace MachineLearning.Models
             predictionEngine.OutputSchema["Score"].Annotations.GetValue("SlotNames", ref labelBuffer);
             var labels = labelBuffer.DenseValues().Select(l => l.ToString()).ToArray();*/
 
-            return result.PredictedLabel.ToString();
+            if (result == null)
+            {
+                return "Error";
+            }
+            else
+            {
+                return result.PredictedLabel.ToString();
+            }
         }
 
 
