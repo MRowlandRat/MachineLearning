@@ -10,11 +10,11 @@ namespace MachineLearning.Models
         public string predictData(string companyName, string location, string rocketStatus, string rocketCost)
         {
             //this is an instance of the prediction engine
-            var mlContext = new MLContext();
-            //exported model as a zip
-            var transformer = mlContext.Model.Load("MLModelAbby.zip", out _);
-            var predictionEngine = mlContext.Model
-                .CreatePredictionEngine<ModelInput, ModelOutput>(transformer);
+            //var mlContext = new MLContext();
+            ////exported model as a zip
+            //var transformer = mlContext.Model.Load("MLModelAbby.zip", out _);
+            //var predictionEngine = mlContext.Model
+            //    .CreatePredictionEngine<ModelInput, ModelOutput>(transformer);
 
             //Load sample data
             var sampleData = new MLModelAbby.ModelInput()
