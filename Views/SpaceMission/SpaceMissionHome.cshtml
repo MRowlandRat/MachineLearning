@@ -4,54 +4,56 @@
     ViewData["Title"] = "SpaceMissionHome";
 }
 
-    <style>
-        .help {
-            background-image: url("~/download.png"); 
-        }
+<style>
+    .background {
+        background-image: url("~/galaxy.png");
+        background-color: blue;
+    }   
+</style>
 
-    </style>
+<html class="background">
 
-<div class="help">
-    <form asp-controller="SpaceMission" asp-action="SpaceMissionResultPage" method="post">
-
-        <div class="help">
+    <div class="background">
+        <form asp-controller="SpaceMission" asp-action="SpaceMissionResultPage" method="post">
             <div>
-                <h2>
-                    Enter Data for Mission Prediction
-                    <hr />
-                    <div asp-validation-summary="All"></div>
-                </h2>
+                <div>
+                    <h2>
+                        Enter Data for Mission Prediction
+                        <div asp-validation-summary="All"></div>
+                    </h2>
+                </div>
+
+                <div>
+                    <label asp-for="companyName"></label>
+                    <input asp-for="companyName" />
+                    <span asp-validation-for="companyName"></span>
+                </div>
+
+                <div>
+                    <label asp-for="location"></label>
+                    <input asp-for="location" />
+                    <span asp-validation-for="location"></span>
+                </div>
+
+                <div>
+                    <label asp-for="statusRocket"></label>
+                    <input asp-for="statusRocket" />
+                    <span asp-validation-for="statusRocket"></span>
+                </div>
+
+                <div>
+                    <label asp-for="rocketCost"></label>
+                    <input asp-for="rocketCost" />
+                    <span asp-validation-for="rocketCost"></span>
+                </div>
+
+                <button type="submit">
+                    Predict Mission Success
+                </button>
             </div>
 
-            <div>
-                <label asp-for="companyName"></label>
-                <input asp-for="companyName" />
-                <span asp-validation-for="companyName"></span>
-            </div>
+        </form>
 
-            <div>
-                <label asp-for="location"></label>
-                <input asp-for="location" />
-                <span asp-validation-for="location"></span>
-            </div>
+    </div>
 
-            <div>
-                <label asp-for="statusRocket"></label>
-                <input asp-for="statusRocket" />
-                <span asp-validation-for="statusRocket"></span>
-            </div>
-
-            <div>
-                <label asp-for="rocketCost"></label>
-                <input asp-for="rocketCost" />
-                <span asp-validation-for="rocketCost"></span>
-            </div>
-
-            <button type="submit">
-                Predict Mission Success
-            </button>
-        </div>
-
-    </form>
-
-</div>
+</html>
