@@ -1,0 +1,55 @@
+﻿@model D2Guns
+
+<form asp-controller="Destiny2" asp-action="Destiny2_Prediction" method="post">
+    <style>
+        .background{
+            background-color:blueviolet;
+        }
+    </style>
+    <h2>Enter Destiny gun info</h2>
+    
+    <div>
+        <div>
+            <h2>
+                enter the information below and hit submit
+                <hr/>
+                <div asp-validation-summary="All"></div>
+            </h2>
+        </div>
+        <div>
+            <label asp-for="Gun_name"></label>
+            <input asp-for="Gun_name" />
+            <span asp-validation-for="Gun_name"></span>
+        </div>
+        <div>
+            <label asp-for="Gun_archtype"></label>
+            <input asp-for="Gun_archtype" />
+            <span asp-validation-for="Gun_archtype"></span>
+        </div>
+        <div>
+            <label asp-for="Source"></label>
+            <input asp-for="Source" />
+            <span asp-validation-for="Source"></span>
+        </div>
+        <div>
+            <label asp-for="Element"></label>
+            <input asp-for="Element" />
+            <span asp-validation-for="Element"></span>
+        </div>
+        <div>
+            <label asp-for="Gun_Rof"></label>
+            <input asp-for="Gun_Rof" />
+            <span asp-validation-for="Gun_Rof"></span>
+        </div>
+        <div>
+            <label asp-for="Weapon_type"></label>
+            <input asp-for="Weapon_type" />
+            <span asp-validation-for="Weapon_type"></span>
+        </div>
+        <button type="submit" class="D2Guns">
+            create prediction
+        </button>
+    </div>
+
+    
+</form>
