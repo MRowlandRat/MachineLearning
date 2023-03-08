@@ -1,59 +1,55 @@
 ﻿@model SpaceMissionModel
-
-@{
-    ViewData["Title"] = "SpaceMissionHome";
-}
-
+@*
 <style>
     .background {
         background-image: url("~/galaxy.png");
         background-color: blue;
     }   
-</style>
+</style>*@
 
-<html class="background">
+@*<html class="background">*@
 
-    <div class="background">
-        <form asp-controller="SpaceMission" asp-action="SpaceMissionResultPage" method="post">
-            <div>
-                <div>
-                    <h2>
-                        Enter Data for Mission Prediction
-                        <div asp-validation-summary="All"></div>
-                    </h2>
-                </div>
+   @* <div class="background">*@
+<form asp-controller="SpaceMission" asp-action="SpaceMissionResultPage" method="post">
+    <div>
+        <div>
+            <h2>
+                Enter Data for Mission Prediction
+                        
+            </h2>
+        </div>
 
-                <div>
-                    <label asp-for="companyName"></label>
-                    <input asp-for="companyName" />
-                    <span asp-validation-for="companyName"></span>
-                </div>
+        <div>
+            <label asp-for="CompanyName"></label>
+            <input asp-for="CompanyName" />
+            <span asp-validation-for="CompanyName"></span>
+        </div>
 
-                <div>
-                    <label asp-for="location"></label>
-                    <input asp-for="location" />
-                    <span asp-validation-for="location"></span>
-                </div>
+        <div>
+            <label asp-for="Location"></label>
+            <input asp-for="Location" />
+            <span asp-validation-for="Location"></span>
+        </div>
 
-                <div>
-                    <label asp-for="statusRocket"></label>
-                    <input asp-for="statusRocket" />
-                    <span asp-validation-for="statusRocket"></span>
-                </div>
+        <div>
+            <label asp-for="StatusRocket"></label>
+            <input asp-for="StatusRocket" />
+            <span asp-validation-for="StatusRocket"></span>
+        </div>
 
-                <div>
-                    <label asp-for="rocketCost"></label>
-                    <input asp-for="rocketCost" />
-                    <span asp-validation-for="rocketCost"></span>
-                </div>
+        <div>
+            <label asp-for="RocketCost"></label>
+            <input asp-for="RocketCost" />
+            <span asp-validation-for="RocketCost"></span>
+        </div>
 
-                <button type="submit">
-                    Predict Mission Success
-                </button>
-            </div>
-
-        </form>
-
+        <button type="submit">
+            Predict Mission Success
+        </button>
     </div>
 
-</html>
+</form>
+@*
+    </div>*@
+
+@*</html>*@
