@@ -8,6 +8,12 @@
     <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Views\DS2\**" />
+    <Content Remove="Views\DS2\**" />
+    <EmbeddedResource Remove="Views\DS2\**" />
+    <None Remove="Views\DS2\**" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
     <PackageReference Include="Microsoft.ML" Version="1.7.1" />
     <PackageReference Include="Microsoft.ML.FastTree" Version="1.7.1" />
@@ -27,9 +33,6 @@
       <DependentUpon>MLMSav.mbconfig</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\DS2\" />
   </ItemGroup>
   <ItemGroup Label="MLMMichael">
     <None Include="MLMMichael.consumption.cs">

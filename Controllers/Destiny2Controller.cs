@@ -16,8 +16,8 @@ namespace MachineLearning.Controllers
             return View();
         }
 
-        
-        public IActionResult Destiny2_Prediction(D2Guns gun)
+        [HttpPost]
+        public IActionResult Destiny2_Predictions(D2Guns gun)
         {
 
 
