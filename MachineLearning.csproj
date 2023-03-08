@@ -31,7 +31,6 @@
   <ItemGroup>
     <Folder Include="Views\DS2\" />
   </ItemGroup>
-</Project>
   <ItemGroup Label="MLMMichael">
     <None Include="MLMMichael.consumption.cs">
       <DependentUpon>MLMMichael.mbconfig</DependentUpon>
@@ -44,7 +43,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-</Project>
   <ItemGroup Label="CancerClassification">
     <None Include="CancerClassification.consumption.cs">
       <DependentUpon>CancerClassification.mbconfig</DependentUpon>
