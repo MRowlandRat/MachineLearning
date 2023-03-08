@@ -1,8 +1,4 @@
-﻿using Microsoft.ML.Data;
-using Microsoft.ML;
-using static MachineLearning.MLModelAbby;
-
-namespace MachineLearning.Models
+﻿namespace MachineLearning.Models
 {
     public class connAbby
     {

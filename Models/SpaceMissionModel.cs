@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace MachineLearning.Models
+﻿namespace MachineLearning.Models
 {
     public class SpaceMissionModel
     {
@@ -12,30 +10,25 @@ namespace MachineLearning.Models
         //        Rocket = @"29.75",
 
        
-        public string? companyName { get; set; }
+        public string CompanyName { get; set; }
 
-        public string? location { get; set; }
+        public string Location { get; set; }
 
-        public string? statusRocket { get; set; }
+        public string StatusRocket { get; set; }
 
-        public string? rocketCost { get; set; }
+        public string RocketCost { get; set; }
 
         public SpaceMissionModel(string companyName, string location, string statusRocket, string rocketCost)
         {
-            this.companyName = companyName;
-            this.location = location;
-            this.statusRocket = statusRocket;
-            this.rocketCost = rocketCost;
+            CompanyName = companyName;
+            Location = location;
+            StatusRocket = statusRocket;
+            RocketCost = rocketCost;
         }
 
         public SpaceMissionModel()
         {
 
-        }
-
-        public override string ToString()
-        {
-            return $"Inputs:\n      Company Name: {companyName} \n      Location: {location} \n     Rocket Status: {statusRocket} \n    Rocket Cost: {rocketCost}";
         }
 
     }

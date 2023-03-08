@@ -10,16 +10,14 @@ namespace MachineLearning.Controllers
 
         [HttpGet]
         public IActionResult SpaceMissionHome()
-        {
-            Console.WriteLine("method reached");
+        { 
             return View();
         }
 
         [HttpPost]
         public IActionResult SpaceMissionResultPage(SpaceMissionModel model)
         {
-            Console.WriteLine("results reached");
-            string prediction = conn.predictData(model.companyName, model.location, model.statusRocket, model.rocketCost);
+            string prediction = conn.predictData(model.CompanyName, model.Location, model.StatusRocket, model.RocketCost);
             ViewBag.Prediction = prediction;
             return View();
         }
